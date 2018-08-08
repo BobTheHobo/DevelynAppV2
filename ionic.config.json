@@ -1,0 +1,7 @@
+{
+  "name": "sociallogin",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
