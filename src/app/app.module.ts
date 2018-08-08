@@ -7,9 +7,23 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SeventhPage } from '../pages/seventh/seventh'; 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth'; 
+
+
+var config = {
+  apiKey: "AIzaSyDj0R1moaXcx5i4f_uraNwvG0yJMb3gttg",
+  authDomain: "school-app-ecd39.firebaseapp.com",
+  databaseURL: "https://school-app-ecd39.firebaseio.com",
+  projectId: "school-app-ecd39",
+  storageBucket: "school-app-ecd39.appspot.com",
+  messagingSenderId: "868266531907"
+};
 
 @NgModule({
   declarations: [
@@ -17,11 +31,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    SeventhPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,7 +46,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    SeventhPage
   ],
   providers: [
     StatusBar,
