@@ -8,14 +8,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
+import { SeventhPage } from '../seventh/seventh';
+import { SportsPage } from '../sports/sports';
+import { SettingsPage } from '../settings/settings';
 var TabsPage = /** @class */ (function () {
     function TabsPage() {
         this.tab1Root = HomePage;
-        this.tab2Root = AboutPage;
-        this.tab3Root = ContactPage;
+        this.tab2Root = SeventhPage;
+        this.tab3Root = SportsPage;
+        this.tab4Root = SettingsPage;
     }
     TabsPage = __decorate([
         Component({
