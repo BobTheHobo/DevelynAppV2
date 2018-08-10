@@ -15,12 +15,21 @@
 </ion-header>
 
 <ion-content padding>
-	<button ion-button (click)="loginWithGoogle()" *ngIf="!provider.loggedin">Log in with Google</button>
+	<button ion-button (click)="login()" *ngIf="!provider.loggedin">Log in with Google</button>
 
-	<p *ngIf="provider.loggedin">
-		{{ provider.name }}
-		{{ provider.email }}
-	</p>
+	<ion-card *ngIf="provider.loggedin">
+		<img src="{{ provider.profilePicture }}"/>
+		<ion-card-content>
+			<ion-card-title>
+				{{ provider.name }}
+			</ion-card-title>
+			<p>
+				email: {{ provider.email}}<br/>
+				7th hour info will be added here???<br/>
+				profile picture will probably be removed
+			</p>
+		</ion-card-content>
+	</ion-card>
 
 	<button ion-button (click)="logout()" *ngIf="provider.loggedin">Log out</button>
 	
