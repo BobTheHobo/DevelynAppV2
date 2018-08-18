@@ -23,7 +23,6 @@ import firebase from 'firebase';
      name: '',
      profilePicture: '',
      email: '',
-     domain: '',
      loggedin: false
    }
 
@@ -51,8 +50,7 @@ import firebase from 'firebase';
        this.provider.name = res.user.displayName;
        this.provider.email = res.user.email;
        this.provider.profilePicture = res.user.photoURL;
-       this.provider.domain = res.additionalUserInfo.profile.hd;
-       if(this.provider.domain != 'jeffcoschools.us'){
+       if(!this.provider.email.endsWith('jeffcoschools.us')){
          this.alert(this.provider.email+' isn\'t registered with jeffcoschools! Please log in with a jeffcoschools email.', 'Error!');
          this.logout();
        }else{
