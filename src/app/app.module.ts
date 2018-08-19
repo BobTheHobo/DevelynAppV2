@@ -8,6 +8,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { SeventhPage } from '../pages/seventh/seventh'; 
 import { SportsPage } from '../pages/sports/sports';
 import { SettingsPage } from '../pages/settings/settings';
+import { SportsListComponent } from '../components/sports-list/sports-list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,6 +34,7 @@ var config = {
     SeventhPage,
     SportsPage,
     SettingsPage,
+    SportsListComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ var config = {
     SeventhPage,
     SportsPage,
     SettingsPage,
+    SportsListComponent
   ],
   providers: [
     StatusBar,

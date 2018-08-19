@@ -1,25 +1,38 @@
 <ion-header>
 	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+
 		<ion-title>
 			Sports Ball
 		</ion-title>
-	</ion-navbar>
-	<style type="text/css">
-	@media screen and (min-width: 100px) {
-		iframe#sportsWidget {
-			width: 90vw;
-			height: 84vh;
-		}
-	}
-</style>
-</ion-header>
 
-<ion-content padding>
+		<ion-buttons end>
+			<button id="moreButton" ion-button (click)="presentPopover($event)">
+				<ion-icon name="more"></ion-icon>
+			</button>
+		</ion-buttons>
+
+	</ion-navbar>
+
+	<style type="text/css">
+		@media screen and (min-width: 100px) {
+			iframe#sportsWidget {
+				width: 80vw;
+				height: 84vh;
+				overflow-x: scroll;
+			}
+		}
+	</style>
+</ion-header>
+<ion-content>
 	<div padding>
 		<div>
-			<iframe id="sportsWidget" style="border: 0px" srcdoc="If you see this eat a hot dog">
+			<a name="rightHere"></a>
+			<iframe id="sportsWidget" style="border: 10px" width = 100% srcdoc="If you see this eat a hot dog">
 				<p>Max Preps Widget</p>
 			</iframe>
-		</div>
+		</div>	
 	</div>
 </ion-content>
